@@ -1,0 +1,511 @@
+<!DOCTYPE>
+<html>
+<head>
+	<!-- link to bootstrap; we need this or else our shit will not work!!!-->
+	<link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel = "stylesheet" type = "text/css" href = "produce.css">
+	<script src= "cart.js"></script>
+	<title> Bakery </title>
+</head>
+<body>
+	<!-- Logo -->
+<center><a href = "homepage.html"> <img src = "Images/storelogo.jpg" alt = "Damola & Partners Fine Grocers Logo" id="logo"> </a></center>
+
+<!-- Navbar -->
+<nav class= "navbar navbar-expand-lg" role = "navigation">
+		<!-- Navbar brand that is the button that takes us back to the homepage-->
+	<a class = "navbar-brand mb-0 h1" href = "homepage.html"> Damola & Partners </a>
+		<!-- as the screen gets smaller, the navbar becomes a little hamburger menu to reveal the remaining contents of the navbar-->
+	<button class = "navbar-toggler navbar-dark" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "false" aira-label = "Toggle navigation"> <span class = "navbar-toggler-icon"></span></button>
+	<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+		<div class = "container">
+			<!-- the actual navbar contents, every list item is a link-->
+			<div class = "navbar-nav justify-content-between">
+			<ul class = "navbar-nav">
+				<!-- the My Rewards page, so sign up/login page -->
+				<li class = "nav-item">
+					<a class = "nav-link" href = "register.php" active> My Rewards </a>
+				</li>
+				<!-- Food Dropdown menu -->
+				<li class = "nav-item dropdown"> 
+					<a class = "nav-link dropdown-toggle" href = "#" id = "dropdown" role = "button" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false" active> Food </a>
+					<div = class  = "dropdown-menu" aria-labelledby = "navbarDropdown">
+						<!-- link to produce page -->
+						<a class = "dropdown-item" href = "produce.html"> Produce </a>
+						<!-- link to frozen page-->
+						<a class = "dropdown-item" href = "frozen.html"> Frozen </a>
+						<!-- link to bakery page -->
+						<a class = "dropdown-item" href = "bakery.html"> Bakery </a>
+					</div>
+				</li>
+			</ul>
+			<span class = "navbar-nav" id = "nav-right">
+				<!-- my cart, use document.getElementById('cart') in javascript to change the cart number -->
+				<a class = "nav-item nav-link justify-content-end" id = "cart" href="cart.php"> My Cart (0) </a>
+				<!-- contact us page wtih info-->
+				<a class = "nav-item nav-link justify-content-end" href = "contactus.html"> Contact Us </a>
+			</span>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- END of navbar -->
+
+<!-- products; each product is contained within a card. -->
+<br><center> <h2> Freshly Baked </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Croissants -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/croissant.jpg" alt="Croissant"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Croissants </h5>
+		   		<p class="card-text">$1.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#croissant">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="croissant" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Croissants</h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/croissant.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Bagels -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/bagel.jpg" alt="Bagels"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Bagels </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#bagel">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="bagel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Bagels </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/bagel.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Baguette-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/whitebaguette.jpg" alt="Baguette"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Baguette </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#baguette"> View Details </button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="baguette" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Baguette </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/whitebaguette.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Multi-grain Baguette -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/multigrainbaguette.jpg" alt="Multi-grain Baguette"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Multi-grain Baguette</h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#mgbaguette">View Details</button>
+		    	<button type = "button" class="btn btn-outline-success" onclick="add()">Add to Cart</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="mgbaguette" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Multi-grain Baguette </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/multigrainbaguette.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Garlic Bread -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/garlicbread.jpg" alt="Garlic Bread"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Garlic Bread</h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#garlicbread">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="garlicbread" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Garlic Bread </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/garlicbread.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- Packaged Breads -->
+<br><center> <h2> Packaged Breads </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Bread -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/wonderbreadwholewheat.jpg" alt="Bread"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Bread </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#bread">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="bread" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Bread </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/wonderbreadwholewheat.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Everything Bagels -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/countryharvesteverythingbagels.jpg" alt="Everything Bagels"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Everything Bagels </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#everythingbagel">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="everythingbagel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Everything Bagels </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/countryharvesteverythingbagels.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Pitas-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/greekstylepita.jpg" alt="Pitas"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Pitas </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#pita"> View Details </button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="pita" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Pitas </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/greekstylepita.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Tortilla -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/pctortillas.jpg" alt="Tortilla"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Tortillas </h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#tortilla">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="tortilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Tortillas </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/pctortillas.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Naan -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/pcnaan.jpg" alt="Naan"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Naan </h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#naan">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="naan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Naan </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/pcnaan.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- Cakes -->
+<br><center> <h2> Cakes </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Pound Cake -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/goldenpoundcake.jpg" alt="Pound Cake"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Pound Cake </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#poundcake">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="poundcake" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Pound Cake </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/goldenpoundcake.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Chocolate Cake -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/farmersmarketchocolate.jpg" alt="Chocolate Cake"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Chocolate Cake </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#chocolatecake">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="chocolatecake" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Chocolate Cake </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/farmersmarketchocolate.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Cupcakes-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/celebrationcupcakes.jpg" alt="Cupcakes"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Cupcakes </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#cupcakes"> View Details </button>
+		    	<button type = "button" class="btn btn-outline-success" onclick="add()"> Add to Cart </button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="cupcakes" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Cupcakes </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/celebrationcupcakes.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Peacan Bundt Cake -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/peacanbundtcake.jpg" alt="Peacan Bundt Cake"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Peacan Bundt Cake </h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#peacan">View Details</button>
+		    	
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="peacan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Peacan Bundt Cake </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/peacanbundtcake.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Banana Cake -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/bananapoundcake.jpg" alt="Banana Cake"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Banana Cake </h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#bananacake">View Details</button>
+		    	<button type = "button" class="btn btn-outline-success" onclick="add()">Add to Cart</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="bananacake" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Banana Cake </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/bananapoundcake.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<br>
+
+<!-- Page Footer, only stays as a footer beacuse of css, so copy the footer and footer text css -->
+<div class = "footer">
+	<p id = "footer-text"> Damola & Partners Inc. &copy; </p>
+</div>
+<!-- END of footer -->
+
+<!-- SCRIPTS always make sure the scripts are in this order and at the bottom or else our shit will not work!!! so jquery first, popper second, and bootstrap last -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

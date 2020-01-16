@@ -1,0 +1,53 @@
+/* COPY FROM HERE for each page*/
+body {
+	background: rgb(255,230,190);
+	font-family: Roboto, sans-serif;
+}
+
+.navbar, .nav-item, .nav-link, .nabar-brand{
+	background-color:#acacac ;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: rgb(0,175,0);
+}
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #acacac;
+	color: white;
+	text-align: center;
+	height: 50px;
+}
+
+#footer-text{
+	padding-top: 10px;
+}
+/*COPY UP TO HERE for each page*/s
+
+.homecard:active, .homecard:hover, .homecard:visited, {
+	color:white;
+}
+
+#slide1, #slide2, #slide3 {
+	height: 640px;
+}
+
+.card-img {
+	opacity: 0.5;
+}
+
+.card-title {
+	font-weight: bold;
+	font-size: 88px;
+	padding-top: 250px;
+	opacity:0.75;
+}
+

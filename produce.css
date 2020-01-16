@@ -1,0 +1,44 @@
+body {
+	background: rgb(255,230,190);
+	font-family: Roboto, sans-serif;
+}
+
+.navbar, .nav-item, .nav-link, .nabar-brand{
+	background-color:#acacac ;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: rgb(0,175,0);
+}
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #acacac;
+	color: white;
+	text-align: center;
+	height: 50px;
+}
+
+#footer-text{
+	padding-top: 10px;
+}
+
+.card {
+	background-color:white;
+}
+
+.card-img-top {
+	height: 286px;
+	width: 286px;
+}
+.modalimg {
+	height: 480px;
+	width: 480px;
+}

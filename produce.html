@@ -1,0 +1,496 @@
+<!DOCTYPE>
+<html>
+<head>
+	<!-- link to bootstrap; we need this or else our shit will not work!!!-->
+	<link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel = "stylesheet" type = "text/css" href = "produce.css">
+
+	<title> Produce </title>
+</head>
+<body>
+	<!-- Logo -->
+<center><a href = "homepage.html"> <img src = "Images/storelogo.jpg" alt = "Damola & Partners Fine Grocers Logo" id="logo"> </a></center>
+
+<!-- Navbar -->
+<nav class= "navbar navbar-expand-lg" role = "navigation">
+		<!-- Navbar brand that is the button that takes us back to the homepage-->
+	<a class = "navbar-brand mb-0 h1" href = "homepage.html"> Damola & Partners </a>
+		<!-- as the screen gets smaller, the navbar becomes a little hamburger menu to reveal the remaining contents of the navbar-->
+	<button class = "navbar-toggler navbar-dark" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "false" aira-label = "Toggle navigation"> <span class = "navbar-toggler-icon"></span></button>
+	<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+		<div class = "container">
+			<!-- the actual navbar contents, every list item is a link-->
+			<div class = "navbar-nav justify-content-between">
+			<ul class = "navbar-nav">
+				<!-- the My Rewards page, so sign up/login page -->
+				<li class = "nav-item">
+					<a class = "nav-link" href = "register.php" active> My Rewards </a>
+				</li>
+				<!-- Food Dropdown menu -->
+				<li class = "nav-item dropdown"> 
+					<a class = "nav-link dropdown-toggle" href = "#" id = "dropdown" role = "button" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false" active> Food </a>
+					<div = class  = "dropdown-menu" aria-labelledby = "navbarDropdown">
+						<!-- link to produce page -->
+						<a class = "dropdown-item" href = "produce.html"> Produce </a>
+						<!-- link to frozen page-->
+						<a class = "dropdown-item" href = "frozen.html"> Frozen </a>
+						<!-- link to bakery page -->
+						<a class = "dropdown-item" href = "bakery.html"> Bakery </a>
+					</div>
+				</li>
+			</ul>
+			<span class = "navbar-nav" id = "nav-right">
+				<!-- my cart, use document.getElementById('cart') in javascript to change the cart number -->
+				<a class = "nav-item nav-link justify-content-end" id = "cart" href="cart.php"> My Cart (0) </a>
+				<!-- contact us page wtih info-->
+				<a class = "nav-item nav-link justify-content-end" href = "contactus.html"> Contact Us </a>
+			</span>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- END of navbar -->
+
+<!-- products; each product is contained within a card. -->
+<br><center> <h2> Fruits </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Banana -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/banana.jpg" alt="banana"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Banana</h5>
+		   		<p class="card-text" id = "bananaprice" >$1.99 </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#banana">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="banana" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle">Banana</h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/banana.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Apple -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/honeycrispapple.jpg" alt="Apple"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Apple</h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#apple">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="apple" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle">Apple</h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/honeycrispapple.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Orange-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/navelorange.jpg" alt="Orange"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Orange </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#orange"> View Details </button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="orange" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Orange </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/navelorange.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Lemon -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/lemon.jpg" alt="Lemon"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Lemon</h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#lemon">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="lemon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Lemon </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/lemon.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Kiwi -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/kiwi.jpg" alt="Kiwi"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Kiwi</h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#kiwi">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="kiwi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Kiwi </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/kiwi.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- Veggies -->
+<br><center> <h2> Vegetables </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Eggplant -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/eggplant.jpg" alt="eggplant"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Eggplant </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#eggplant">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="eggplant" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Eggplant </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/eggplant.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Red Peppers -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/redpepper.jpg" alt="Peppers"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Peppers</h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#pepper">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="pepper" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle">Peppers</h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/redpepper.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Mushrooms-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/creminimushroom.jpg" alt="Mushroom"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Mushrooms </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#mushroom"> View Details </button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="mushroom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Mushroom </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/creminimushroom.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Tomato -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/romatomato.jpg" alt="Tomato"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title">Tomato</h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#tomato">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="tomato" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Tomato </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/romatomato.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Onion -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/redonion.jpg" alt="Kiwi"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Onions </h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#onion">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="onion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Onions </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/redonion.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- Herbs -->
+<br><center> <h2> Herbs </h2></center> <br>
+<div class ="container col-10">
+	<div class ="row">
+	<div class = "card-deck">
+		<!-- Parsley -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/curlyparsley.jpg" alt="Parsley"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Parsley </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#parsley">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="parsley" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Parsley </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/curlyparsley.jpg" class = "modalimg"></center>
+  	    				<p> From Guatemala <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Mint -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/mint.jpg" alt="Mint"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Mint </h5>
+		   		<p class="card-text">$1.49/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#mint">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="mint" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Mint </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/mint.jpg" class = "modalimg"></center>
+  	    				<p> From USA <br> $1.49/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!--Cilantro-->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/cilantro.jpg" alt="Cilantro"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Cilantro </h5>
+		   		<p class="card-text"> $1.99/lb </p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#cilantro"> View Details </button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="cilantro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Cilantro </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/cilantro.jpg" class = "modalimg"></center>
+  	    				<p> From Mexico <br> $1.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Basil -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/basil.jpg" alt="Basil"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Basil </h5>
+		   		<p class="card-text">$0.99/lb</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#basil">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="basil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Basil </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/basil.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.99/lb</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+
+		<!-- Thyme -->
+		<div class="card border-success">
+		  	<center><img class="card-img-top" src="Images/thyme.jpg" alt="Thyme"></center>
+		  	<div class="card-body">
+		    	<h5 class="card-title"> Thyme </h5>
+		   		<p class="card-text">$0.39 each</p>
+		    	<button type = "button" class="btn btn-outline-success" data-toggle = "modal" data-target = "#thyme">View Details</button>
+		  	</div>
+		</div>
+		<!-- QUICKVIEW MODAL-->
+		<div class="modal fade" id="thyme" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+  	  			<div class="modal-content">
+  	    			<div class="modal-header">
+  	      				<h5 class="modal-title" id="exampleModalCenterTitle"> Thyme </h5>
+  	     				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 	         				<span aria-hidden="true">&times;</span>
+  	      				</button>
+  	    			</div>
+  	    			<div class="modal-body">
+  	    				<center><img src = "Images/thyme.jpg" class = "modalimg"></center>
+  	    				<p> From Spain <br> $0.39 each</p>
+  	    			</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<br>
+
+<!-- Page Footer, only stays as a footer beacuse of css, so copy the footer and footer text css -->
+<div class = "footer">
+	<p id = "footer-text"> Damola & Partners Inc. &copy; </p>
+</div>
+<!-- END of footer -->
+
+<!-- SCRIPTS always make sure the scripts are in this order and at the bottom or else our shit will not work!!! so jquery first, popper second, and bootstrap last -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
